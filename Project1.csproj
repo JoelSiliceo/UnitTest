@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3111E816-C46B-48A8-A2A0-B49509397221}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Project1</RootNamespace>
+    <AssemblyName>Project1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GenerarFechaActual.cs" />
+    <Compile Include="IGenerarFechaActual.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\CalcularDiferencia.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\CalcularDiferenciaXDia.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\CalcularDiferenciaXHora.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\CalcularDiferenciaXMinutos.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\CalcularDiferenciaXSegundo.cs" />
+    <Compile Include="ProcesarEventos\EvaluarEvento\EvaluarEvento.cs" />
+    <Compile Include="ProcesarEventos\EvaluarEvento\IEvaluarEvento.cs" />
+    <Compile Include="LeerDatos\LeerArchivoTexto.cs" />
+    <Compile Include="LeerDatos\ILeerDatos.cs" />
+    <Compile Include="EjAnalsis.cs" />
+    <Compile Include="Evento.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\ICalcularDiferenciaEventos.cs" />
+    <Compile Include="ProcesarEventos\ImprimirEvento\IImprimirEvento.cs" />
+    <Compile Include="ProcesarEventos\ImprimirEvento\ImprimirEvento.cs" />
+    <Compile Include="ProcesarEventos\ImprimirEvento\ImprimirEventoAnterior.cs" />
+    <Compile Include="ProcesarEventos\ImprimirEvento\ImprimirEventoPosterior.cs" />
+    <Compile Include="ProcesarEventos\IProcesarEventos.cs" />
+    <Compile Include="ProcesarEventos\ProcesarEventos.cs" />
+    <Compile Include="ProcesarEventos\CalculoDiferencia\CalcularDiferenciaXMes.cs" />
+    <Compile Include="TransformaDatos\ITransformarArchivo.cs" />
+    <Compile Include="TransformaDatos\TransformarArchivo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
