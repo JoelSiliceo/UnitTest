@@ -38,7 +38,7 @@ namespace Project1.ProcesarEventos.ImprimirEvento.Tests
         {
             //ARRANGE
             var DOCIEvaluarEvento = new Mock<IEvaluarEvento>();
-            DOCIEvaluarEvento.Setup(e => e.esEventoMayorHoy(new Evento())).Returns(true);
+            DOCIEvaluarEvento.Setup(e => e.esEventoMayorHoy(It.IsAny<Evento>())).Returns(true);
 
             //ACT
             var SUT = ImprimirEvento.CrearTipoEvento(DOCIEvaluarEvento.Object, new Evento());
