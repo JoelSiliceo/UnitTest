@@ -20,12 +20,14 @@ namespace Project1.ProcesarEventos
             List<Evento> eventos = transformadorEventos.TransformarArchivoEventos();
             IGenerarFechaActual generarFechaActual = new GenerarFechaActual();
             IEvaluarEvento evalEvento = new EvaluarEvento.EvaluarEvento(generarFechaActual);
+            IImpresionFactory impresionFactory;
             IImprimirEvento imprimirEventos;
 
             foreach (Evento evento in eventos)
             {
                 List<ICalcularDiferenciaEventos> calculadores = this.GenerarListaCaculadores(evento);
-                imprimirEventos = ImprimirEvento.ImprimirEvento.CrearTipoEvento(evalEvento, evento);
+                impresionFactory = new ImpresionFactory(evalEvento, evento);
+                imprimirEventos = impresionFactory.CrearTipoEvento();
                 imprimirEventos.ImprimirEnConsola(calculadores);
             }
         }

@@ -50,7 +50,9 @@
     <Compile Include="EjAnalsis.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="ProcesarEventos\CalculoDiferencia\ICalcularDiferenciaEventos.cs" />
+    <Compile Include="ProcesarEventos\ImprimirEvento\IImpresionFactory.cs" />
     <Compile Include="ProcesarEventos\ImprimirEvento\IImprimirEvento.cs" />
+    <Compile Include="ProcesarEventos\ImprimirEvento\ImpresionFactory.cs" />
     <Compile Include="ProcesarEventos\ImprimirEvento\ImprimirEvento.cs" />
     <Compile Include="ProcesarEventos\ImprimirEvento\ImprimirEventoAnterior.cs" />
     <Compile Include="ProcesarEventos\ImprimirEvento\ImprimirEventoPosterior.cs" />

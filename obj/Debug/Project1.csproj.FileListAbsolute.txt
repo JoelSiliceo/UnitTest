@@ -1,0 +1,7 @@
+C:\Users\joel.siliceo\source\repos\UnitTest\bin\Debug\Project1.exe.config
+C:\Users\joel.siliceo\source\repos\UnitTest\bin\Debug\Project1.exe
+C:\Users\joel.siliceo\source\repos\UnitTest\bin\Debug\Project1.pdb
+C:\Users\joel.siliceo\source\repos\UnitTest\obj\Debug\Project1.csprojAssemblyReference.cache
+C:\Users\joel.siliceo\source\repos\UnitTest\obj\Debug\Project1.csproj.CoreCompileInputs.cache
+C:\Users\joel.siliceo\source\repos\UnitTest\obj\Debug\Project1.exe
+C:\Users\joel.siliceo\source\repos\UnitTest\obj\Debug\Project1.pdb
