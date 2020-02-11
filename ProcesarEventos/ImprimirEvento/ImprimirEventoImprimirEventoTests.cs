@@ -38,14 +38,15 @@ namespace Project1.ProcesarEventos.ImprimirEvento.Tests
         {
             //ARRANGE
             var DOCIEvaluarEvento = new Mock<IEvaluarEvento>();
+            var IImprimirEvento = 
             DOCIEvaluarEvento.Setup(e => e.esEventoMayorHoy(It.IsAny<Evento>())).Returns(true);
+            var imprimirFactory = new ImpresionFactory(DOCIEvaluarEvento.Object, new Evento());
 
             //ACT
-            var SUT = ImprimirEvento.CrearTipoEvento(DOCIEvaluarEvento.Object, new Evento());
-
-
+            var SUT = imprimirFactory.CrearTipoEvento();
+           
             //ASSERT
-            Assert.AreEqual(typeof(ImprimirEventoAnterior), SUT.GetType());
+            Assert.AreEqual(typeof(ImprimirEventoPosterior), SUT.GetType());
         }
 
 
