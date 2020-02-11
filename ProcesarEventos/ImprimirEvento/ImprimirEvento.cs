@@ -9,18 +9,6 @@ namespace Project1.ProcesarEventos.ImprimirEvento
     {
         private Evento evento;
 
-        public static ImprimirEvento CrearTipoEvento(IEvaluarEvento _EvaluarEvento, Evento _evento)
-        {
-            if (_EvaluarEvento.esEventoMayorHoy(_evento))
-            {
-                return new ImprimirEventoPosterior(_evento);
-            }
-            else
-            {
-                return new ImprimirEventoAnterior(_evento);
-            }
-        }
-
         protected ImprimirEvento(Evento _evento)
         {
             this.evento = _evento;
